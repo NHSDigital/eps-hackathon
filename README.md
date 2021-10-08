@@ -1,205 +1,94 @@
 # EPS API Hackathon Setup
 
-
 ## Introduction
+
 The following document will provide a working guide on the setup required before attending the Hackathon, including information on:
+
 * Setting up an NHSD Developer Account
 * Creating an API application
 * Creating a client server (optional)
 * Setup Auth in Postman
 * Sending an example message
 
-
 The intention is to provide a guide on initial setup with the NHSD API platform and send an initial message using the development tool Postman.
 
-
-The Electronic Prescription Service - FHIR API documentation can be found here: 
-
-        https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir
-
+The Electronic Prescription Service - FHIR API documentation can be found [here](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir):
 
 You can find information about both prescribing and dispensing endpoints as well as information on how to sign prescriptions using the Signing Service API.
 
+The Signing Service API documentation can be found [here](https://digital.nhs.uk/developer/api-catalogue/signing-service):
 
-The Signing Service API documentation can be found here: 
-
-        https://digital.nhs.uk/developer/api-catalogue/signing-service
-
-
-This guide doesn’t cover integrating with the signing service, however it is part of integrating with the wider EPS for prescribing so is included here for reference. 
-        
- 
-
-
-
-
-
-
-
+This guide doesn’t cover integrating with the signing service, however it is part of integrating with the wider EPS for prescribing so is included here for reference.
 
 ## Make a Developer Account
- 
-Step one is to create an NHSD developer account. This is the same as creating an account with any online service. Enter an email address and password, then follow the link in your confirmation email.
 
+Step one is to create an NHSD developer account. This is the same as creating an account with any online service. Enter an email address and password, then follow the link in your confirmation email.
 
 Follow Step 2 of this page:
 
 [Getting started with NHS Digital APIs](https://digital.nhs.uk/developer/getting-started)
 
-
-
-
 ## Create an Application
- 
+
 You will need to register a user-restricted app on our platform. This is done by logging into the developer portal with the account created in step 1 and choosing My Applications - New App.
 
 Developer Portal:
 
-         https://portal.developer.nhs.uk/
-
+`https://portal.developer.nhs.uk/`
 
 This process is outlined by the tutorial “Creating an application” here:
 
- [User-restricted REST API tutorial](https://digital.nhs.uk/developer/guides-and-documentation/tutorials/user-restricted-rest-api-tutorial)
-
+[User-restricted REST API tutorial](https://digital.nhs.uk/developer/guides-and-documentation/tutorials/user-restricted-rest-api-tutorial)
 
 This will supply your App ID, API Key, and Secret.
 ![App ID, Key and Secret](/eps-hackathon/assets/image5.png)
 
-
-
-
-
-
-
 When making a new app, enable Electronic Prescription Service - integration testing environment.
 ![Enable EPS](/eps-hackathon/assets/image7.png)  
 
-
-
-
-
 Optionally enable Signing Service - integration testing environment. This will not be used for this walkthrough but could be useful for more advanced development.
-  
-
-
-
-
-
-
+![Advanced deployment](/eps-hackathon/assets/image6.png)  
 
 The API uses OAuth 2.0 authorisation and will need a callback URL. For the purposes of this guide we will use a Postman callback URL:
 
-https://oauth.pstmn.io/v1/browser-callback
+`https://oauth.pstmn.io/v1/browser-callback`
   
-
-
+![Postman callback](/eps-hackathon/assets/image1.png)  
 
 If you are creating your own client server (Optional next step), provide your own callback URL.
 
+Save your app.
 
-Save your app. 
-
-
-
-
-
-
-
-
-
-
-
-
- 
 ## (Optional) Create a client server
- 
-This is an optional step in order to develop software against our API rather than using Postman. This is out of scope for this guide but a brief example using the platform’s Hello World API can be adapted for use with EPS: 
+
+This is an optional step in order to develop software against our API rather than using Postman. This is out of scope for this guide but a brief example using the platform’s Hello World API can be adapted for use with EPS:
 User-restricted REST API tutorial
- 
-
-
-
 
 ## Setup Postman Auth
 
 In order to send a message to the EPS FHIR API using Postman, it’s necessary to setup the Authorization parameters in the correct way to use OAuth 2.0.
 
-
- 
+![Postman auth](/eps-hackathon/assets/image6.png)
   
-  
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Postman example](/eps-hackathon/assets/image4.png)
 
 ## Send a Message
 
-The first step in the Prescribing workflow is to prepare a prescription for signing. We will hit this endpoint using Postman in order to test that our app and authorization is set up correctly. 
- 
+The first step in the Prescribing workflow is to prepare a prescription for signing. We will hit this endpoint using Postman in order to test that our app and authorization is set up correctly.
 
+### POST to
 
-### POST to:
-
-https://int.api.service.nhs.uk/electronic-prescriptions/FHIR/R4/$prepare
- 
-
+`https://int.api.service.nhs.uk/electronic-prescriptions/FHIR/R4/$prepare`
 
 ### Headers
 
-```
+```text
 Accept: application/fhir+json
 Content-Type: application/fhir+json
 X-Request-Id: {{$guid}}
 ```
 
 Note: The X-Request-Id is generated by Postman
- 
-  
-
-
-
-
-
-
 
 ### Body
 
@@ -212,12 +101,8 @@ This is an example FHIR bundle resource that contains the following resources re
 * Practitioner
 * Organization
 
-
-
-
-
-
 Message:
+
 ```json
 {
   "resourceType": "Bundle",

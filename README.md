@@ -44,7 +44,7 @@ Step one is to create an NHSD developer account. This is the same as creating an
 
 Follow Step 2 of this page:
 
-Getting started with NHS Digital APIs 
+[Getting started with NHS Digital APIs](https://digital.nhs.uk/developer/getting-started)
 
 
 
@@ -60,7 +60,7 @@ Developer Portal:
 
 This process is outlined by the tutorial “Creating an application” here:
 
- User-restricted REST API tutorial
+ [User-restricted REST API tutorial](https://digital.nhs.uk/developer/guides-and-documentation/tutorials/user-restricted-rest-api-tutorial)
 
 
 This will supply your App ID, API Key, and Secret.

@@ -12,11 +12,11 @@ The following document will provide a working guide on the setup required before
 
 The intention is to provide a guide on initial setup with the NHSD API platform and send an initial message using the development tool Postman.
 
-The Electronic Prescription Service - FHIR API documentation can be found [here](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir):
+The Electronic Prescription Service - FHIR API documentation can be found [here](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir).
 
 You can find information about both prescribing and dispensing endpoints as well as information on how to sign prescriptions using the Signing Service API.
 
-The Signing Service API documentation can be found [here](https://digital.nhs.uk/developer/api-catalogue/signing-service):
+The Signing Service API documentation can be found [here](https://digital.nhs.uk/developer/api-catalogue/signing-service).
 
 This guide doesn’t cover integrating with the signing service, however it is part of integrating with the wider EPS for prescribing so is included here for reference.
 
@@ -36,9 +36,7 @@ Developer Portal:
 
 `https://portal.developer.nhs.uk/`
 
-This process is outlined by the tutorial “Creating an application” here:
-
-[User-restricted REST API tutorial](https://digital.nhs.uk/developer/guides-and-documentation/tutorials/user-restricted-rest-api-tutorial)
+This process is outlined by the tutorial “Creating an application” [here](https://digital.nhs.uk/developer/guides-and-documentation/tutorials/user-restricted-rest-api-tutorial)
 
 This will supply your App ID, API Key, and Secret.
 ![App ID, Key and Secret](/eps-hackathon/assets/image5.png)

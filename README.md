@@ -64,7 +64,7 @@ This process is outlined by the tutorial “Creating an application” here:
 
 
 This will supply your App ID, API Key, and Secret.
-  
+![App ID, Key and Secret](/eps-hackathon/assets/image5.jpg)
 
 
 
@@ -73,7 +73,7 @@ This will supply your App ID, API Key, and Secret.
 
 
 When making a new app, enable Electronic Prescription Service - integration testing environment.
-  
+![Enable EPS](/eps-hackathon/assets/image7.jpg)  
 
 
 

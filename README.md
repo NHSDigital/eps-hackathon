@@ -45,7 +45,7 @@ When making a new app, enable Electronic Prescription Service - integration test
 ![Enable EPS](/eps-hackathon/assets/image7.png)  
 
 Optionally enable Signing Service - integration testing environment. This will not be used for this walkthrough but could be useful for more advanced development.
-![Advanced deployment](/eps-hackathon/assets/image6.png)  
+![Advanced deployment](/eps-hackathon/assets/image2.png)  
 
 The API uses OAuth 2.0 authorisation and will need a callback URL. For the purposes of this guide we will use a Postman callback URL:
 

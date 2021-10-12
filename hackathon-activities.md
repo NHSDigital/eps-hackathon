@@ -7,9 +7,21 @@ We understand that some suppliers may only be interested in Prescribing actions 
 
 Additionally, there is an introduction to our preliminary Tracking API, with one endpoint available. One of our goals is to receive feedback on how this API could be developed further. 
 
+### Task
+Integrating with EPS API requires the sourcing of relevant information required for the prescription messages. Suppliers often have different sources and workflows for obtaining the information necessary to form a valid message.
+
+Messages contain the following elements, please consider how you would populate them. Suggestions are provided:
+
+* MessageHeader - Message type and status information - [Guide](https://simplifier.net/guide/NHSDigital/NHSDigital-MessageHeader)
+* MedicationRequest - Drug information including snomed/dm+d codes - [snomed](https://termbrowser.nhs.uk/?) | [dm+d](https://applications.nhsbsa.nhs.uk/DMDBrowser/DMDBrowser.do)
+* Patient - Patient information including name and address - [PDS](https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir) 
+* Practitioner - Prescriber information e.g. DIN number, GMC number etc. [ODS](https://odsportal.digital.nhs.uk/Organisation/Search) | [SDS LDAP](https://digital.nhs.uk/developer/api-catalogue/spine-directory-service-ldap) (Prefer ODS over SDS).
+* Organization - Organization information e.g. ODS code, telephone etc. [ODS](https://odsportal.digital.nhs.uk/Organisation/Search)
+* PractitionerRole - Practitioner + Organization information - use above for reference.
+
 ## Prescribing
 ### Task 1
-We have provided some pre-signed prescriptions [here](https://github.com/NHSDigital/eps-hackathon/tree/main/signed-prescriptions). 
+We have provided some pre-signed prescriptions, ask an EPS development team member for a set of prescriptions to use. 
 
 You can use the `/$process-message` endpoint to send these examples to Spine. 
 

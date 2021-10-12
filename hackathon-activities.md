@@ -9,7 +9,7 @@ Additionally, there is an introduction to our preliminary Tracking API, with one
 
 ## Prescribing
 ### Task 1
-We have provided some pre-signed prescriptions [here](/eps-hackathon/signed-prescriptions). 
+We have provided some pre-signed prescriptions [here](https://github.com/NHSDigital/eps-hackathon/tree/main/signed-prescriptions). 
 
 You can use the `/$process-message` endpoint to send these examples to Spine. 
 

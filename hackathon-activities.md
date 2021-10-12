@@ -41,6 +41,8 @@ Withdraw a previous dispense notification from (e.g. from Task 4), call the ```/
 ## Tracking
 The prescription tracking API is a work in progress and as yet only a query by ID is available for use: call ```/Task``` with query parameter ```identifier```.
 
+Example: `GET https://int.api.service.nhs.uk/FHIR/R4/Task?identifier=CDF34E-A99968-4FF3BQ`
+
 ### Task 1
 We would appreciate feedback on how to further develop this Tracker API. A brief overview of our planned queries are outlined here:
 * Query on Prescription ID (available) - returns a single prescription

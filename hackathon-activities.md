@@ -30,7 +30,7 @@ After sending the prescription, track it using the Tracker endpoint detailed in 
 As well as tracking the prescription, you can send a cancellation message using the [`/$process-message#prescription-order-update`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Prescribing-send-prescription-order-update-message) endpoint. Use the tracker again to check the status has changed on the prescription.
 
 ### Task 2
-To complete the prescribing workflow, you must sign new prescriptions in order to make them legally valid. This EPS FHIR API supported method of signing prescriptions is using the Signing Service API.
+To complete the prescribing workflow, you must sign new prescriptions in order to make them legally valid. We recommend using the [Signing Service API](https://digital.nhs.uk/developer/api-catalogue/signing-service) for this.
 
 Information on integrating with the Signing Service API can be found [here](https://digital.nhs.uk/developer/api-catalogue/signing-service). Contact someone from the EPS development team to receive credentials for this.
 

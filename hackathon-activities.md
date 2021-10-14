@@ -23,7 +23,7 @@ Messages contain the following elements, please consider how you would populate 
 ### Task 1
 We have provided some pre-signed prescriptions, ask an EPS development team member for a set of prescriptions to use. 
 
-Use the `/$process-message` endpoint to send these examples to Spine. 
+Use the [`/$process-message`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Prescribing-send-prescription-order-message) endpoint to send these examples to Spine. 
 
 After sending the prescription, track it using the Tracker endpoint detailed in the last section of this document. 
 
@@ -34,19 +34,19 @@ To complete the prescribing workflow, you must sign new prescriptions in order t
 
 Information on integrating with the Signing Service API can be found [here](https://digital.nhs.uk/developer/api-catalogue/signing-service). Contact someone from the EPS development team to receive credentials for this.
 
-With Signing Service credentials you will be able to `POST /SignatureRequest`, `GET /SignatureResponse`,  along with the `/$prepare` endpoint to complete the whole Prescribing flow.
+With Signing Service credentials you will be able to [`POST /SignatureRequest`](https://digital.nhs.uk/developer/api-catalogue/signing-service#api-SignatureRequest-upload-payload), [`GET /SignatureResponse`](https://digital.nhs.uk/developer/api-catalogue/signing-service#api-SignatureResponse-retrieve-signature),  along with the [`/$prepare`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Prescribing-prepare-prescription) endpoint to complete the whole Prescribing flow.
 
 ## Dispensing
 ### Task 1
-Release a non-nominated prescription, using a prescription ID, call the `/Task/$release` endpoint.
+Release a non-nominated prescription, using a prescription ID, call the [`/Task/$release`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Dispensing-release) endpoint.
 ### Task 2
-Release a nominated pharmacy prescription, using an ODS code for the nominated pharmacy, call the `/Task/$release` endpoint.
+Release a nominated pharmacy prescription, using an ODS code for the nominated pharmacy, call the [`/Task/$release`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Dispensing-release) endpoint.
 ### Task 3
-Create a non-nominated and nominated prescription dispense-notification message, call the `/$process-message#dispense-notification` endpoint.
+Create a non-nominated and nominated prescription dispense-notification message, call the [`/$process-message#dispense-notification`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Dispensing-send-dispense-notification-message) endpoint.
 ### Task 4
 Query a prescription status using the Tracker API endpoint (section 3)
 ### Task 5
-Claim for non-nominated and nominated prescriptions, call the `/Claim` endpoint.
+Claim for non-nominated and nominated prescriptions, call the [`/Claim`](https://digital.nhs.uk/developer/api-catalogue/electronic-prescription-service-fhir#api-Dispensing-send-dispense-claim-message) endpoint.
 ### Task 6
 Withdraw a previous dispense notification from (e.g. from Task 4), call the `/Task#withdraw` endpoint.
 
